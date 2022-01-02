@@ -64,7 +64,7 @@ int product(vector<vector<int>> grid, int i, int j, Directon dir) {
     int product = 1;
     for (int k = 0; k < 4; k++)
         switch (dir) {
-        case Horizontal: product *= grid[i][j + k];; break;
+        case Horizontal: product *= grid[i][j + k]; break;
         case Vertical: product *= grid[i + k][j]; break;
         case Diagonal1: product *= grid[i + k][j + k]; break;
         case Diagonal2: product *= grid[i - k][j + k]; break;
