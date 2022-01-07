@@ -23,7 +23,7 @@ string add(string s1, string s2) {
         s1.insert(0, -deltaLen, '0');
     // Iterates on each digit, from right to left.
     for (int i = s1.length() - 1, carry = 0, partialSum; i >= 0; i--) {
-        partialSum = (s1[i] - '0' + s2[i] - '0') % 10 + carry;
+        partialSum = (s1[i] - '0' + s2[i] - '0' + carry) % 10;
         carry = (s1[i] - '0' + s2[i] - '0') / 10;
         sum.insert(0, 1, (char)(partialSum + '0'));
         if (i == 0 && carry == 1)
