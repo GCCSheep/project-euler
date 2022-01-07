@@ -20,7 +20,7 @@ string add(string s1, string s2) {
     if (deltaLen > 0)
         s2.insert(0, deltaLen, '0');
     else if (deltaLen < 0)
-        s1.insert(0, deltaLen, '0');
+        s1.insert(0, -deltaLen, '0');
     // Iterates on each digit, from right to left.
     for (int i = s1.length() - 1, carry = 0, partialSum; i >= 0; i--) {
         partialSum = (s1[i] - '0' + s2[i] - '0') % 10 + carry;
